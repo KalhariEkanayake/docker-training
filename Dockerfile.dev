@@ -1,8 +1,0 @@
-#Use the derived image using the base image
-FROM my-nest-app as dev
-
-#Make port 3000 available to the world outside this container
-EXPOSE 3000
-
-#Define the command to run the application
-CMD ["npm", "run", "start:dev"]
