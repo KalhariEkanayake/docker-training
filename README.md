@@ -10,27 +10,33 @@ This is a brief description of my Nest.js application.
 Clone the repository:
 ```bash
 git clone https://github.com/KalhariEkanayake/docker-training.git
+```
 
 Install dependencies:
 ```bash
 npm install
+```
 
 Build the Docker image:
 ```bash
 docker build -t my-nest-app .
+```
 
 Build the development Docker image:
 ```bash
 docker build -t my-nest-app-dev -f Dockerfile.dev .
+```
 
 Run the development Docker container:
 ```bash
 docker run -p 3000:3000 my-nest-app-dev
+```
 
 ## Project Structure
 
 Let's clarify the structure and how it relates to base and derived Docker images.
 
+```bash
 my-nest-project/
 |-- node_modules/
 |-- src/
@@ -43,7 +49,7 @@ my-nest-project/
 |-- package.json
 |-- tsconfig.json
 |-- README.md
-
+```
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
