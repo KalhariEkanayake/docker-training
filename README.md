@@ -9,27 +9,28 @@ This is a brief description of my Nest.js application.
 ## Installation
 Clone the repository:
 ```bash
-git clone https://github.com/KalhariEkanayake/docker-training.git
+$ git clone https://github.com/KalhariEkanayake/docker-training.git
 ```
 
 Install dependencies:
 ```bash
-npm install
+$ npm install
 ```
 
 Build the Docker image:
 ```bash
-docker build -t my-nest-app .
+$ docker build -t my-nest-app-base -f Dockerfile-dev ./ 
 ```
 
 Build the development Docker image:
 ```bash
-docker build -t my-nest-app-dev -f Dockerfile.dev .
+$ docker build -t my-nest-app-prod -f Dockerfile-prod ./
 ```
 
 Run the development Docker container:
 ```bash
-docker run -p 3000:3000 my-nest-app-dev
+$ docker build -t app-service .  
+$ docker run -p 3000:3000 --name my-service app-service
 ```
 
 ## Project Structure
@@ -44,9 +45,11 @@ my-nest-project/
 |   |-- app.module.ts
 |   |-- app.controller.ts
 |   |-- app.service.ts
-|-- Dockerfile (base image)
-|-- Dockerfile.dev (derived image using the base image)
+|-- Dockerfile
+|-- Dockerfile-dev
+|-- Dockerfile-prod
 |-- package.json
+|-- package-lock.json
 |-- tsconfig.json
 |-- README.md
 ```
